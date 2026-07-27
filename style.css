@@ -181,3 +181,29 @@ body { padding: 0 20px; }
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
+/* MOBILE RESPONSIVE FIX */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  .services-grid, .work-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 15px;
+  }
+}

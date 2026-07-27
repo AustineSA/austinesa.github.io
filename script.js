@@ -71,9 +71,10 @@ function showOwnerInfo() {
     alert(portfolioOwner.name + "-" + portfolioOwner.role);
 }
 let projects = [
-    { title: "portfolio Website", tech: "HTML/CSS/JS", status: "Complete" },
-    { title: "Weather App", tech: "JavaScript API", status: "Planned" },
-    { title: "Todo List", tech: "React", status: "Planned" }
+  { title: "Portfolio Website", tech: "HTML/CSS/JS", status: "Completed" },
+  { title: "Queenies Enterprise", tech: "HTML/CSS", status: "Completed" },
+  { title: "Weather App", tech: "JavaScript API", status: "Planned" },
+  { title: "Todo List", tech: "React", status: "Planned" }
 ];
 
 projects.forEach(function(project) {

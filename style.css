@@ -97,3 +97,87 @@ li{
     }
 }
 body { padding: 0 20px; }
+/* PROJECTS SECTION */
+#projects {
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.project {
+  background: white;
+  padding: 25px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 600px;
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.project h3 {
+  color: #e91e63; /* Queenies pink vibe */
+  margin-bottom: 10px;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #e91e63;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.project a:hover {
+  background: #c2185b;
+}
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  footer {
+    padding-bottom: 90px; /* space for WhatsApp button */
+  }
+  footer p {
+    font-size: 12px; /* make footer text smaller */
+    padding: 0 15px; /* add space so text doesn't touch edges */
+    line-height: 1.6;
+  }
+  footer strong {
+    display: block; /* Put "Nexa Digitals" on new line */
+    color: #ff2e88;
+  }
+}
+/* FLOATING WHATSAPP BUTTON */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #FFF;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 32px;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}

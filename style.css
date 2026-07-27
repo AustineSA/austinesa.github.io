@@ -232,3 +232,102 @@ body { padding: 0 20px; }
     padding: 70px 25px !important; /* BIG breathing room */
   }
 }
+/* ========== MOBILE RESPONSIVE FIX FOR NEXA ========== */
+@media (max-width: 768px) {
+  
+  /* HEADER */
+  header .container {
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+  .logo {
+    font-size: 24px !important;
+    letter-spacing: 1px !important;
+  }
+  nav {
+    display: flex !important;
+    gap: 12px !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  nav a {
+    margin: 0 8px !important;
+    font-size: 14px !important;
+  }
+  
+  /* HERO */
+  .hero {
+    padding: 80px 20px !important;
+  }
+  .hero h1 {
+    font-size: 2.8rem !important; /* 45px instead of 60px */
+    line-height: 1.15 !important;
+  }
+  .hero p {
+    font-size: 1.1rem !important;
+    margin-bottom: 30px !important;
+  }
+  .btn {
+    padding: 16px 35px !important;
+    font-size: 15px !important;
+  }
+  
+  /* ALL SECTIONS */
+  section {
+    padding: 70px 20px !important;
+  }
+  h2 {
+    font-size: 2.2rem !important; /* 35px */
+    margin-bottom: 15px !important;
+  }
+  .subtitle {
+    font-size: 16px !important;
+    margin-bottom: 40px !important;
+  }
+  
+  /* ABOUT */
+  .about-grid {
+    grid-template-columns: 1fr !important; /* Stack on mobile */
+    gap: 30px !important;
+  }
+  .about-text h3 {
+    font-size: 24px !important;
+  }
+  
+  /* SERVICES + WORK */
+  .grid {
+    grid-template-columns: 1fr !important; /* 1 card per row */
+    gap: 25px !important;
+  }
+  .card {
+    padding: 30px 25px !important;
+  }
+  .card h3 {
+    font-size: 22px !important;
+  }
+  
+  /* PROJECT */
+  .project-img {
+    height: 200px !important;
+    font-size: 40px !important;
+  }
+  .project h3 {
+    font-size: 22px !important;
+  }
+  
+  /* CONTACT */
+  .contact {
+    padding: 40px 25px !important;
+  }
+  .btn-whatsapp {
+    padding: 16px 35px !important;
+    font-size: 15px !important;
+    width: 100% !important;
+    max-width: 350px !important;
+  }
+  
+  /* FOOTER */
+  footer {
+    padding: 30px 20px !important;
+  }
+}

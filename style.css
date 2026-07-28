@@ -1,333 +1,146 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+/* ========== NEXA DIGITALS GLOBAL STYLES ========== */
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+body { 
+  font-family: 'Poppins', sans-serif; 
+  background: #050505; 
+  color: #fff; 
+  padding: 0; /* removed the 20px padding that was breaking layout */
 }
+.container { max-width: 1200px; margin: auto; padding: 0 20px; }
+a { text-decoration: none; }
 
-header{
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px;
-    text-align: center;
-
+/* HEADER */
+header { 
+  background: rgba(0,0,0,0.9); 
+  backdrop-filter: blur(10px); 
+  padding: 20px 0; 
+  position: sticky; 
+  top: 0; 
+  z-index: 1000; 
+  border-bottom: 1px solid #00d4ff33; 
 }
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
+header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { 
+  font-size: 30px; 
+  font-weight: 900; 
+  background: linear-gradient(90deg, #00d4ff, #ff2e88); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  letter-spacing: 2px; 
+  height: 50px;
 }
+nav a { color: #fff; margin: 0 18px; font-weight: 600; transition: 0.3s; }
+nav a:hover { color: #00d4ff; }
 
-main{
-    padding: 30px;
-    max-width: 800px;
-    margin: 0 auto;
+/* HERO */
+.hero { 
+  padding: 120px 20px; 
+  text-align: center; 
+  background: radial-gradient(circle at top, #001a24 0%, #050505 70%); 
 }
+.hero h1 { font-size: 56px; font-weight: 900; line-height: 1.1; margin-bottom: 15px; }
+.hero h1 span { background: linear-gradient(90deg, #00d4ff, #ff2e88); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero .tagline { font-size: 22px; color: #00d4ff; font-weight: 700; margin-bottom: 20px; }
+.hero p { font-size: 18px; color: #bbb; max-width: 700px; margin: 0 auto 10px; }
+.hero .regions { font-size: 16px; color: #ff2e88; font-weight: 600; margin-bottom: 40px; }
+.btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+.btn { 
+  background: linear-gradient(90deg, #00d4ff, #0099cc); 
+  color: #000; 
+  padding: 18px 40px; 
+  border-radius: 50px; 
+  font-weight: 800; 
+  font-size: 16px; 
+  display: inline-block; 
+  transition: 0.3s; 
+  box-shadow: 0 10px 30px rgba(0,212,255,0.3); 
+}
+.btn:hover { transform: translateY(-4px); box-shadow: 0 15px 40px rgba(0,212,255,0.5); }
+.btn-secondary { background: transparent; border: 2px solid #00d4ff; color: #00d4ff; }
 
-h2{
-    color: #2c3e50;
-    border-bottom: 2px solid #2c3e50;
-    padding-bottom: 8px;
+/* SECTIONS */
+section { padding: 100px 20px; }
+h2 { 
+  font-size: 42px; 
+  text-align: center; 
+  margin-bottom: 20px; 
+  background: linear-gradient(90deg, #00d4ff, #ff2e88); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
 }
+.subtitle { text-align: center; color: #aaa; margin-bottom: 60px; font-size: 18px; }
 
-footer{
-    text-align: center;
-    padding: 20px;
-    background-color: #2c3e50;
-    color: white;
-    margin-top: 40px;
-}
+/* ABOUT */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.about-text h3 { font-size: 28px; margin-bottom: 15px; color: #00d4ff; }
 
-li{
-    margin-bottom: 8px;
+/* SERVICES */
+#services { background: #0a0a0a; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.card { 
+  background: linear-gradient(180deg, #111, #0a0a0a); 
+  padding: 40px 30px; 
+  border-radius: 20px; 
+  border: 1px solid #222; 
+  transition: 0.4s; 
 }
+.card:hover { border-color: #00d4ff; transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,212,255,0.2); }
+.card .icon { font-size: 40px; margin-bottom: 15px; }
+.card h3 { color: #00d4ff; margin-bottom: 15px; font-size: 22px; }
 
-.card-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+/* WORK */
+.project { background: #111; border-radius: 20px; border: 1px solid #222; overflow: hidden; transition: 0.4s; }
+.project:hover { border-color: #ff2e88; transform: translateY(-10px); }
+.project-img { height: 200px; background: linear-gradient(135deg, #ff2e88, #00d4ff); display: flex; align-items: center; justify-content: center; font-size: 48px; }
+.project-tag { display: inline-block; background: #00d4ff22; color: #00d4ff; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 10px; }
+.project-content { padding: 30px; }
+.project h3 { color: #ff2e88; margin-bottom: 10px; font-size: 22px; }
+.btn-project { background: linear-gradient(90deg, #ff2e88, #ff6b9d); color: #fff; padding: 12px 30px; border-radius: 50px; font-weight: 700; display: inline-block; margin-top: 15px; }
 
-.card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    flex: 1;
-    min-width: 200px;
-}
+/* CONTACT */
+.contact { background: linear-gradient(135deg, #001a24, #050505); border-radius: 25px; padding: 60px 40px; text-align: center; border: 1px solid #00d4ff33; }
+.btn-whatsapp { background: #25D366; color: #fff; padding: 18px 40px; border-radius: 50px; font-weight: 800; font-size: 16px; display: inline-block; margin-top: 20px; }
 
-.card h3 {
-    color: #2c3e50;
-    margin-top: 0;
+/* STICKY WHATSAPP - matches your .whatsapp-float */
+.sticky-whatsapp, .whatsapp-float { 
+  position: fixed; 
+  bottom: 25px; 
+  right: 25px; 
+  z-index: 9999; 
+  background: linear-gradient(135deg, #25D366, #128C7E); 
+  color: #fff; 
+  padding: 15px 20px; 
+  border-radius: 50px; 
+  font-weight: 800; 
+  box-shadow: 0 10px 30px rgba(37,211,102,0.4); 
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
+  transition: 0.3s; 
 }
+.sticky-whatsapp:hover, .whatsapp-float:hover { transform: scale(1.1); }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 20px;
-}
+/* FOOTER */
+footer { background: #000; padding: 40px 20px; text-align: center; border-top: 1px solid #222; }
 
-.grid-item {
-    background-color: #ecf0f1;
-    padding: 40px;
-    text-align: center;
-    border-radius: 8px;
-    font-weight: bold;
-    color: #2c3e50;
-}
-
-@media (max-width: 600px) {
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
-    .card-container {
-        flex-direction: column;
-    }
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-
-    h1 {
-        font-size: 28px;
-    }
-}
-body { padding: 0 20px; }
-/* PROJECTS SECTION */
-#projects {
-  padding: 40px 20px;
-  background: #f9f9f9;
-}
-
-#projects h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #333;
-}
-
-.project {
-  background: white;
-  padding: 25px;
-  margin: 20px auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  max-width: 600px;
-  transition: transform 0.3s;
-}
-
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
-.project h3 {
-  color: #e91e63; /* Queenies pink vibe */
-  margin-bottom: 10px;
-}
-
-.project a {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #e91e63;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-}
-
-.project a:hover {
-  background: #c2185b;
-}
-/* MOBILE FIX */
+/* ========== MOBILE RESPONSIVE ========== */
 @media (max-width: 768px) {
-  footer {
-    padding-bottom: 90px; /* space for WhatsApp button */
-  }
-  footer p {
-    font-size: 12px; /* make footer text smaller */
-    padding: 0 15px; /* add space so text doesn't touch edges */
-    line-height: 1.6;
-  }
-  footer strong {
-    display: block; /* Put "Nexa Digitals" on new line */
-    color: #ff2e88;
-  }
-}
-/* FLOATING WHATSAPP BUTTON */
-.whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 20px;
-  right: 20px;
-  background: linear-gradient(135deg, #25D366, #128C7E);
-  color: #FFF;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 32px;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
-/* MOBILE RESPONSIVE FIX V3 - FORCE EXPANDED */
-@media (max-width: 768px) {
+  header .container { flex-direction: column; gap: 15px; }
+  .logo { font-size: 24px; }
+  nav { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+  nav a { margin: 0 8px; font-size: 14px; }
   
-  body {
-    padding: 0 !important;
-    margin: 0 !important;
-  }
+  .hero { padding: 80px 20px; }
+  .hero h1 { font-size: 2.8rem; }
+  .hero p { font-size: 1.1rem; }
   
-  /* HERO SECTION */
-  section:first-of-type {
-    padding: 80px 25px !important; /* BIG spacing like desktop */
-  }
+  section { padding: 70px 20px; }
+  h2 { font-size: 2.2rem; }
   
-  h1 {
-    font-size: 3.2rem !important; /* HUGE like laptop */
-    line-height: 1.1 !important;
-    margin-bottom: 20px !important;
-  }
+  .about-grid { grid-template-columns: 1fr; gap: 30px; }
+  .grid { grid-template-columns: 1fr; gap: 25px; }
+  .card { padding: 30px 25px; }
   
-  h2 {
-    font-size: 2.2rem !important;
-    margin: 40px 0 20px 0 !important;
-  }
-  
-  p {
-    font-size: 1.2rem !important;
-    line-height: 1.7 !important;
-    margin-bottom: 25px !important;
-  }
-  
-  /* NAV */
-  nav, .nav {
-    display: flex !important;
-    justify-content: space-around !important;
-    padding: 20px 10px !important;
-    font-size: 15px !important;
-  }
-  
-  /* BUTTONS */
-  a.btn, button {
-    padding: 18px 35px !important;
-    font-size: 1.1rem !important;
-    margin: 15px 0 !important;
-    display: inline-block !important;
-  }
-  
-  /* ALL SECTIONS */
-  section {
-    padding: 70px 25px !important; /* BIG breathing room */
-  }
-}
-/* ========== MOBILE RESPONSIVE FIX FOR NEXA ========== */
-@media (max-width: 768px) {
-  
-  /* HEADER */
-  header .container {
-    flex-direction: column !important;
-    gap: 15px !important;
-  }
-  .logo {
-    font-size: 24px !important;
-    letter-spacing: 1px !important;
-  }
-  nav {
-    display: flex !important;
-    gap: 12px !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-  }
-  nav a {
-    margin: 0 8px !important;
-    font-size: 14px !important;
-  }
-  
-  /* HERO */
-  .hero {
-    padding: 80px 20px !important;
-  }
-  .hero h1 {
-    font-size: 2.8rem !important; /* 45px instead of 60px */
-    line-height: 1.15 !important;
-  }
-  .hero p {
-    font-size: 1.1rem !important;
-    margin-bottom: 30px !important;
-  }
-  .btn {
-    padding: 16px 35px !important;
-    font-size: 15px !important;
-  }
-  
-  /* ALL SECTIONS */
-  section {
-    padding: 70px 20px !important;
-  }
-  h2 {
-    font-size: 2.2rem !important; /* 35px */
-    margin-bottom: 15px !important;
-  }
-  .subtitle {
-    font-size: 16px !important;
-    margin-bottom: 40px !important;
-  }
-  
-  /* ABOUT */
-  .about-grid {
-    grid-template-columns: 1fr !important; /* Stack on mobile */
-    gap: 30px !important;
-  }
-  .about-text h3 {
-    font-size: 24px !important;
-  }
-  
-  /* SERVICES + WORK */
-  .grid {
-    grid-template-columns: 1fr !important; /* 1 card per row */
-    gap: 25px !important;
-  }
-  .card {
-    padding: 30px 25px !important;
-  }
-  .card h3 {
-    font-size: 22px !important;
-  }
-  
-  /* PROJECT */
-  .project-img {
-    height: 200px !important;
-    font-size: 40px !important;
-  }
-  .project h3 {
-    font-size: 22px !important;
-  }
-  
-  /* CONTACT */
-  .contact {
-    padding: 40px 25px !important;
-  }
-  .btn-whatsapp {
-    padding: 16px 35px !important;
-    font-size: 15px !important;
-    width: 100% !important;
-    max-width: 350px !important;
-  }
-  
-  /* FOOTER */
-  footer {
-    padding: 30px 20px !important;
-  }
+  .sticky-whatsapp { bottom: 20px; right: 20px; padding: 12px 16px; font-size: 14px; }
+  footer { padding-bottom: 90px; } /* space for WhatsApp button */
 }

@@ -1,50 +1,56 @@
-console.log("Hello Austine, javaScript is working");
+console.log("Hello Austine, Nexa Digitals JS is working 🚀");
 
-let name = "Austine";
-let yearslearning = 0;
+let ownerName = "Austine";
 
+// Show welcome alert on load
 function greet() {
-    alert("welcome to your portfolio," + name + "!");
+    alert("Welcome to Nexa Digitals, " + ownerName + "!");
 }
-//conditionals
-let hourslearningtoday = 5;
-if (hourslearningtoday >= 5) {
-    console.log("Great consistency today");
+
+// Track consistency
+let hoursLearningToday = 5;
+if (hoursLearningToday >= 5) {
+    console.log("Great consistency today 💪");
 } else {
     console.log("Try to hit 5 hours tomorrow");
 }
 
-//loop
-for (let day = 1; day <= 9; day++) {
-    console.log("day" + day + " completed");
-}
-let skillsLearned =["HTML", "CSS", "Flexbox","Grid","Responsive Design", "Git", "Github", "javaScript"];
+// Skills counter for the site
+let skillsLearned = ["HTML", "CSS", "Flexbox", "Grid", "Responsive Design", "Git", "Github", "JavaScript"];
+console.log("Total skills learned: " + skillsLearned.length);
 
-console.log("Total skills learned:" + skillsLearned.length);
-
-skillsLearned.forEach(function(skill) {
-    console.log("-" + skill);
-});
-//DOM Manipulation
+// Update the "What We Bring" section with real skills count
 document.addEventListener("DOMContentLoaded", function() {
-    let aboutText = document.querySelector("#about p");
-    console.log("Found the about paragraph:", aboutText);
+    // Update skills count in About section
+    let skillsCountEl = document.getElementById("skillsCount");
+    if(skillsCountEl) {
+        skillsCountEl.textContent = skillsLearned.length;
+    }
+
+    // Load visitor name from localStorage
+    loadVisitorName();
 });
+
+// Change heading dynamically
 function changeSkillsHeading() {
-    document.querySelector("#skills h2").textContent = "Skills I'm Building";
+    document.querySelector("#services h2").textContent = "Services We're Mastering";
 }
+
+// Form validation for contact
 function validateForm() {
     let visitorNameValue = document.getElementById("visitorName").value;
     let visitorEmailValue = document.getElementById("visitorEmail").value;
 
     if (visitorNameValue === "" || visitorEmailValue === "") {
         alert("Please fill in both your name and email.");
-        return false; // stops the form
+        return false;
     }
 
-    alert("Thanks" + visitorNameValue + "! Your message would be sent (this is a demo form).");
-    return false; // stops the form from actually submitting and adding ? to URL
+    saveVisitorName(); // save to localStorage
+    alert("Thanks " + visitorNameValue + "! We'll reach you at " + visitorEmailValue + ". (Demo form)");
+    return false; // stops actual submit
 }
+
 function saveVisitorName() {
     let visitorNameValue = document.getElementById("visitorName").value;
     localStorage.setItem("lastVisitorName", visitorNameValue);
@@ -54,29 +60,32 @@ function saveVisitorName() {
 function loadVisitorName() {
     let savedName = localStorage.getItem("lastVisitorName");
     if (savedName) {
-        console.log("Welcome back," + savedName + "!");
+        console.log("Welcome back, " + savedName + "!");
+        // You can also show this in the hero later
     }
 }
+
+// Owner info object
 let portfolioOwner = {
     name: "Austine Samuel Ugbede",
-    role: "Aspiring Web Developer",
-    skillsCount: 8,
+    role: "Founder & Lead Strategist",
+    skillsCount: skillsLearned.length,
     isAvailableForWork: true
 };
 
-console.log(portfolioOwner.name);
-console.log(portfolioOwner.role);
-
 function showOwnerInfo() {
-    alert(portfolioOwner.name + "-" + portfolioOwner.role);
+    alert(portfolioOwner.name + " - " + portfolioOwner.role);
 }
+
+// Projects array - matches our "Our Work" section
 let projects = [
-  { title: "Portfolio Website", tech: "HTML/CSS/JS", status: "Completed" },
-  { title: "Queenies Enterprise", tech: "HTML/CSS", status: "Completed" },
-  { title: "Weather App", tech: "JavaScript API", status: "Planned" },
-  { title: "Todo List", tech: "React", status: "Planned" }
+  { title: "Queenie Enterprises", tech: "HTML/CSS/WhatsApp API", status: "Completed", category: "Web & Tech" },
+  { title: "Fashion Brand Launch", tech: "Instagram Ads + Content", status: "Completed", category: "Brand & Marketing" },
+  { title: "Analytics Dashboard", tech: "Google Analytics + Data Studio", status: "Completed", category: "Growth & Data" },
+  { title: "NFT Mint Site", tech: "Solidity + Web3.js", status: "Completed", category: "Web3" },
+  { title: "WhatsApp CRM Bot", tech: "Node.js + WhatsApp API", status: "Completed", category: "Automation" }
 ];
 
 projects.forEach(function(project) {
-    console.log(project.title + "-" + project.status);
+    console.log(project.title + " - " + project.category + " - " + project.status);
 });

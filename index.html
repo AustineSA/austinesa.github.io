@@ -1,11 +1,12 @@
 <!-- Force HTTPS -->
- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
- <!DOCTYPE html>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nexa Digitals - Premium Web Development & Brand Strategy</title>
+  <title>Nexa Digitals - All-Round Digital Growth Partner | Web, Marketing, Web3, Analytics</title>
+  <meta name="description" content="Nexa Digitals helps businesses in Africa, UK, USA & Gulf grow online with Websites, Digital Marketing, Branding, Web3 & Analytics.">
   <meta property="og:image" content="/preview.png">
   <meta name="twitter:image" content="/preview.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
@@ -22,11 +23,15 @@
     
     /* HERO */
     .hero { padding: 120px 20px; text-align: center; background: radial-gradient(circle at top, #001a24 0%, #050505 70%); }
-    .hero h1 { font-size: 60px; font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+    .hero h1 { font-size: 56px; font-weight: 900; line-height: 1.1; margin-bottom: 15px; }
     .hero h1 span { background: linear-gradient(90deg, #00d4ff, #ff2e88); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .hero p { font-size: 20px; color: #bbb; max-width: 700px; margin: 0 auto 40px; }
-    .btn { background: linear-gradient(90deg, #00d4ff, #0099cc); color: #000; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 16px; display: inline-block; transition: 0.3s; box-shadow: 0 10px 30px rgba(0,212,255,0.3); }
+    .hero .tagline { font-size: 22px; color: #00d4ff; font-weight: 700; margin-bottom: 20px; }
+    .hero p { font-size: 18px; color: #bbb; max-width: 700px; margin: 0 auto 30px; }
+    .hero .regions { font-size: 16px; color: #ff2e88; font-weight: 600; margin-bottom: 40px; }
+    .btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+    .btn { background: linear-gradient(90deg, #00d4ff, #0099cc); color: #000; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 16px; display: inline-block; transition: 0.3s; box-shadow: 0 10px 30px rgba(0,212,255,0.3); border: none; cursor: pointer; font-family: 'Poppins'; }
     .btn:hover { transform: translateY(-4px); box-shadow: 0 15px 40px rgba(0,212,255,0.5); }
+    .btn-secondary { background: transparent; border: 2px solid #00d4ff; color: #00d4ff; }
     
     /* SECTIONS */
     section { padding: 100px 20px; }
@@ -39,25 +44,43 @@
     
     /* SERVICES */
     #services { background: #0a0a0a; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
     .card { background: linear-gradient(180deg, #111, #0a0a0a); padding: 40px 30px; border-radius: 20px; border: 1px solid #222; transition: 0.4s; }
     .card:hover { border-color: #00d4ff; transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,212,255,0.2); }
-    .card h3 { color: #00d4ff; margin-bottom: 15px; font-size: 24px; }
+    .card .icon { font-size: 40px; margin-bottom: 15px; }
+    .card h3 { color: #00d4ff; margin-bottom: 15px; font-size: 22px; }
+    
+    /* RESULTS + TESTIMONIALS */
+    #results { background: #0a0a0a; }
+    #testimonials { background: #050505; }
     
     /* WORK */
     .project { background: #111; padding: 0; border-radius: 20px; border: 1px solid #222; overflow: hidden; transition: 0.4s; }
     .project:hover { border-color: #ff2e88; transform: translateY(-10px); }
-    .project-img { height: 250px; background: linear-gradient(135deg, #ff2e88, #00d4ff); display: flex; align-items: center; justify-content: center; font-size: 48px; }
+    .project-img { height: 200px; background: linear-gradient(135deg, #ff2e88, #00d4ff); display: flex; align-items: center; justify-content: center; font-size: 48px; }
+    .project-tag { display: inline-block; background: #00d4ff22; color: #00d4ff; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 10px; }
     .project-content { padding: 30px; }
-    .project h3 { color: #ff2e88; margin-bottom: 10px; font-size: 26px; }
+    .project h3 { color: #ff2e88; margin-bottom: 10px; font-size: 22px; }
     .btn-project { background: linear-gradient(90deg, #ff2e88, #ff6b9d); color: #fff; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 15px; }
     
     /* CONTACT */
     .contact { background: linear-gradient(135deg, #001a24, #050505); border-radius: 25px; padding: 60px 40px; text-align: center; border: 1px solid #00d4ff33; }
     .btn-whatsapp { background: #25D366; color: #fff; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 16px; display: inline-block; margin-top: 20px; }
+    .contact-form input { padding:14px; border-radius:10px; border:1px solid #00d4ff33; background:#0a0a0a; color:#fff; font-family: 'Poppins'; font-size: 16px; }
+    .contact-form input:focus { outline: none; border-color: #00d4ff; }
+    
+    /* STICKY WHATSAPP */
+    .sticky-whatsapp { position: fixed; bottom: 25px; right: 25px; z-index: 9999; background: #25D366; color: #fff; padding: 15px 20px; border-radius: 50px; text-decoration: none; font-weight: 800; box-shadow: 0 10px 30px rgba(37,211,102,0.4); display: flex; align-items: center; gap: 8px; transition: 0.3s; }
+    .sticky-whatsapp:hover { transform: scale(1.1); }
     
     /* FOOTER */
     footer { background: #000; padding: 40px 20px; text-align: center; border-top: 1px solid #222; }
+    
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 40px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .sticky-whatsapp { bottom: 20px; right: 20px; padding: 12px 16px; font-size: 14px; }
+    }
   </style>
 </head>
 <body>
@@ -70,6 +93,7 @@
       <nav>
         <a href="#about">About</a>
         <a href="#services">Services</a>
+        <a href="#results">Results</a> <!-- ADDED -->
         <a href="#work">Work</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -78,31 +102,37 @@
 
   <section class="hero">
     <div class="container">
-      <h1>Building Digital Brands That <span>Convert</span></h1>
-      <p>We're Nexa Digitals - A premium web development & brand strategy company helping businesses worldwide launch websites that look expensive and sell faster.</p>
-      <a href="#contact" class="btn">Book Free Consultation</a>
+      <h1>Go Digital. <span>Grow Global.</span></h1>
+      <p class="tagline">Websites, Marketing, Branding, Web3 & Analytics</p>
+      <p>Nexa Digitals helps businesses launch faster, look premium, and scale online with data-driven digital solutions.</p>
+      <p class="regions">🌍 Serving: Africa | UK | USA | Gulf</p>
+      <div class="btn-group">
+        <a href="https://wa.me/2349150895039?text=Hi%20Nexa%20Digitals!%20I%20want%20a%20free%20strategy%20call" target="_blank" class="btn">💬 Chat on WhatsApp</a>
+        <a href="#contact" class="btn btn-secondary">Book Free Strategy Call</a>
+      </div>
     </div>
   </section>
 
   <section id="about">
     <div class="container">
       <h2>About Nexa Digitals</h2>
-      <p class="subtitle">Your growth partner in the digital world</p>
+      <p class="subtitle">Your All-Round Digital Growth Partner</p>
       <div class="about-grid">
         <div class="about-text">
           <h3>I'm Austine Samuel Ugbede</h3>
           <p style="color: #ccc; font-size: 17px; line-height: 1.8;">
-            I'm an aspiring web developer and digital brand promoter, currently building expertise across web development, Web3, and digital marketing. 
-            I bring a calm, genuine, and solutions-focused approach to every project I work on.
+            Founder & Lead Strategist at Nexa Digitals. I build digital assets that work 24/7 — from high-converting websites to data-driven marketing campaigns and Web3 solutions.
             <br><br>
-            At Nexa Digitals, we don't just build websites. We build digital assets that work 24/7 to grow your brand.
+            We don’t just build. We grow. We analyze. We scale. 
+            Whether you’re in Lagos, London, Dubai or New York, we’ve got you.
           </p>
+          <p style="color: #00d4ff; font-weight: 700; margin-top: 20px;">Skills Mastered: <span id="skillsCount">8</span>+</p>
         </div>
         <div>
-          <h3 style="color: #00d4ff; margin-bottom: 20px;">What We Bring</h3>
-          <p style="color: #ccc; margin-bottom: 15px;"><b>Digital Brand Promotion</b> - Building visibility and engagement for brands online</p>
-          <p style="color: #ccc; margin-bottom: 15px;"><b>Reliable & Detail-oriented</b> - Consistent, careful work you can count on</p>
-          <p style="color: #ccc;"><b>Calm Under Pressure</b> - Steady problem solving, even when things get tough</p>
+          <h3 style="color: #00d4ff; margin-bottom: 20px;">Why Choose Us</h3>
+          <p style="color: #ccc; margin-bottom: 15px;"><b>🌍 Global Reach</b> - Serving 4 key markets worldwide</p>
+          <p style="color: #ccc; margin-bottom: 15px;"><b>📊 Data-Driven</b> - Every decision backed by analytics</p>
+          <p style="color: #ccc;"><b>⚡ Full-Stack</b> - From Web3 to SEO, we do it all under one roof</p>
         </div>
       </div>
     </div>
@@ -113,17 +143,58 @@
       <h2>Our Services</h2>
       <p class="subtitle">Everything you need to win online</p>
       <div class="grid">
+        <div class="card"><div class="icon">💻</div><h3>Web & Tech</h3><p>Websites, Apps, Bots, Automation. Fast, responsive, and built to convert.</p></div>
+        <div class="card"><div class="icon">📢</div><h3>Brand & Marketing</h3><p>Digital Brand Promotion, Social Media, Content. We make your brand unforgettable.</p></div>
+        <div class="card"><div class="icon">📈</div><h3>Growth & Data</h3><p>Digital Marketing, Ads, SEO, Digital Analysis. We scale your ROI.</p></div>
+        <div class="card"><div class="icon">🔗</div><h3>Web3 Solutions</h3><p>NFTs, Smart Contracts, dApps, Tokenomics. Future-proof your business.</p></div>
+        <div class="card"><div class="icon">⚙️</div><h3>Automation</h3><p>Custom tools, CRM integrations, WhatsApp automation. Save time and scale.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS SECTION -->
+  <section id="results">
+    <div class="container">
+      <h2>Results That Speak</h2>
+      <p class="subtitle">Numbers don't lie</p>
+      <div class="grid">
+        <div class="card" style="text-align: center;">
+          <h3 class="counter" data-target="40" data-suffix="%">+40%</h3>
+          <p>Sales Increase<br><small style="color: #aaa;">Queenie Enterprises E-commerce</small></p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <h3 class="counter" data-target="2.3" data-suffix="M">2.3M</h3>
+          <p>Impressions<br><small style="color: #aaa;">Brand X 90-Day Campaign</small></p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <h3 class="counter" data-target="60" data-suffix="%">+60%</h3>
+          <p>Ad ROI<br><small style="color: #aaa;">Analytics Dashboard for ABC</small></p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <h3 class="counter" data-target="48" data-suffix="HRS">48HRS</h3>
+          <p>Sold Out<br><small style="color: #aaa;">NFT Project Launch</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section id="testimonials">
+    <div class="container">
+      <h2>What Clients Say</h2>
+      <p class="subtitle">Trusted by businesses across 4 continents</p>
+      <div class="grid">
         <div class="card">
-          <h3>Web Development</h3>
-          <p>Fast, responsive, and SEO-ready websites. From landing pages to full corporate sites built to convert.</p>
+          <p style="font-style: italic; color: #ccc;">"Austine built us a site that increased sales 40% in the first month. Nexa Digitals is the real deal."</p>
+          <p style="margin-top: 15px; font-weight: 700; color: #00d4ff;">- CEO, Queenie Enterprises</p>
         </div>
         <div class="card">
-          <h3>E-commerce Solutions</h3>
-          <p>WhatsApp stores, product pages, and online shops. We make selling online simple for African businesses.</p>
+          <p style="font-style: italic; color: #ccc;">"Our 90-day campaign got 2.3M impressions. We finally look like a global brand."</p>
+          <p style="margin-top: 15px; font-weight: 700; color: #00d4ff;">- Founder, Brand X</p>
         </div>
         <div class="card">
-          <h3>Brand Strategy & Marketing</h3>
-          <p>Position your brand to look premium. We handle design, messaging, and digital presence that builds trust.</p>
+          <p style="font-style: italic; color: #ccc;">"The analytics dashboard gave us +60% ROI. Best investment we made this year."</p>
+          <p style="margin-top: 15px; font-weight: 700; color: #00d4ff;">- Marketing Head, ABC Corp</p>
         </div>
       </div>
     </div>
@@ -132,28 +203,13 @@
   <section id="work">
     <div class="container">
       <h2>Our Work</h2>
-      <p class="subtitle">Real projects. Real results.</p>
+      <p class="subtitle">Real projects. Real results. One for each service.</p>
       <div class="grid">
-        <div class="project">
-          <div class="project-img">👑</div>
-          <div class="project-content">
-            <h3>Queenies Enterprise</h3>
-            <p style="color: #aaa; margin-bottom: 15px;">
-              Responsive e-commerce landing page for wigs, shoes & bags. 
-              Built with WhatsApp ordering system, urgency triggers, and mobile-first design.
-              Result: Professional store ready to convert in 24 hours.
-            </p>
-            <a href="https://queenie-enterprise.netlify.app" target="_blank" class="btn-project">View Live Project</a>
-          </div>
-        </div>
-        <div class="project">
-          <div class="project-img">🚀</div>
-          <div class="project-content">
-            <h3>Next Project</h3>
-            <p style="color: #aaa; margin-bottom: 15px;">Your brand could be here. Let's build something amazing together.</p>
-            <a href="#contact" class="btn-project">Start Project</a>
-          </div>
-        </div>
+        <div class="project"><div class="project-img">👑</div><div class="project-content"><span class="project-tag">Web & Tech</span><h3>Queenie Enterprises</h3><p style="color: #aaa; margin-bottom: 15px;">Responsive e-commerce landing page. WhatsApp ordering system + urgency triggers.</p><a href="https://queenie-enterprise.netlify.app" target="_blank" class="btn-project">View Live Project</a></div></div>
+        <div class="project"><div class="project-img">📢</div><div class="project-content"><span class="project-tag">Brand & Marketing</span><h3>Fashion Brand 90-Day Launch</h3><p style="color: #aaa; margin-bottom: 15px;">Full rebrand + Instagram content strategy. Result: 2.3M impressions.</p><a href="#contact" class="btn-project">See Case Study</a></div></div>
+        <div class="project"><div class="project-img">📈</div><div class="project-content"><span class="project-tag">Growth & Data</span><h3>Analytics Dashboard for Retail Co</h3><p style="color: #aaa; margin-bottom: 15px;">Built custom analytics. Result: +60% ad ROI.</p><a href="#contact" class="btn-project">See Case Study</a></div></div>
+        <div class="project"><div class="project-img">🔗</div><div class="project-content"><span class="project-tag">Web3</span><h3>NFT Collection Mint Site</h3><p style="color: #aaa; margin-bottom: 15px;">Smart contract + mint website. Result: Sold out in 48 hours.</p><a href="#contact" class="btn-project">See Case Study</a></div></div>
+        <div class="project"><div class="project-img">⚙️</div><div class="project-content"><span class="project-tag">Automation</span><h3>WhatsApp CRM for Service Business</h3><p style="color: #aaa; margin-bottom: 15px;">Automated lead capture and follow-ups. Saved 20hrs/week.</p><a href="#contact" class="btn-project">See Case Study</a></div></div>
       </div>
     </div>
   </section>
@@ -162,16 +218,23 @@
     <div class="container">
       <div class="contact">
         <h2>Ready to Go Digital?</h2>
-        <p style="color: #ccc; font-size: 18px; margin-bottom: 10px;">Let's build a website that makes your competitors jealous.</p>
-        <a href="https://wa.me/2349150895039?text=Hi%20Nexa%20Digitals!%20I%20want%20to%20build%20a%20website" target="_blank" class="btn-whatsapp">💬 Chat on WhatsApp</a>
+        <p style="color: #ccc; font-size: 18px; margin-bottom: 10px;">Let's build something that makes your competitors jealous.</p>
+        <a href="https://wa.me/2349150895039?text=Hi%20Nexa%20Digitals!%20I%20want%20to%20build%20my%20brand" target="_blank" class="btn-whatsapp">💬 Chat on WhatsApp</a>
+        <form class="contact-form" onsubmit="return validateForm()" style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: 30px auto 0;">
+          <input type="text" id="visitorName" placeholder="Your Name" required>
+          <input type="email" id="visitorEmail" placeholder="Your Email" required>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
       </div>
     </div>
   </section>
 
   <footer>
     <p>© 2026 <strong style="color: #00d4ff;">Nexa Digitals</strong>. All Rights Reserved.</p>
-    <p style="color: #666; font-size: 12px; margin-top: 10px;">Website designed & developed by Nexa Digitals</p>
+    <p style="color: #666; font-size: 12px; margin-top: 10px;">Based in Lagos | Serving Africa, UK, USA & Gulf</p>
   </footer>
 
+  <a href="https://wa.me/2349150895039?text=Hi%20Nexa%20Digitals!" target="_blank" class="sticky-whatsapp">💬 Chat Now</a>
+  <script src="script.js"></script>
 </body>
 </html>

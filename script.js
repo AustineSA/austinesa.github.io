@@ -89,3 +89,11 @@ let projects = [
 projects.forEach(function(project) {
     console.log(project.title + " - " + project.category + " - " + project.status);
 });
+
+// ========== NEW: SMOOTH SCROLL FOR CASE STUDY BUTTONS - ADDED ONLY ==========
+document.querySelectorAll('a[href="#contact"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+});

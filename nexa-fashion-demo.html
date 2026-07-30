@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXA | Premium Collection 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background:#000; color:#fff; -webkit-font-smoothing: antialiased; }
+        
+        /* PREMIUM GLASS TOP BAR - SUBTLE BUT OBVIOUS */
+        .top-bar {
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 14px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-bar .brand-tag {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .top-bar .brand-tag span { color: #00F5FF; }
+        .btn-group-top { display: flex; gap: 12px; }
+        .btn-buy-template {
+            background: #00F5FF;
+            color: #000;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 800;
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .btn-buy-template:hover { background: #fff; transform: translateY(-2px); }
+        .btn-view-demo {
+            background: transparent;
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: 0.3s;
+        }
+        .btn-view-demo:hover { background: rgba(255,255,255,0.1); }
+
+        header { padding:24px 40px; display:flex; justify-content:space-between; align-items:center; }
+        header h1 { font-size:28px; font-weight: 900; letter-spacing: 3px; }
+        header nav a { color: #aaa; text-decoration: none; margin-left: 30px; font-weight: 600; font-size: 14px; transition: 0.3s; }
+        header nav a:hover { color: #00F5FF; }
+        
+        .hero { 
+            height:90vh; 
+            display:flex; 
+            flex-direction:column; 
+            justify-content:center; 
+            align-items:flex-start; 
+            padding:0 10%;
+            background: linear-gradient(90deg, rgba(0,0,0,0.9) 30%, transparent 70%), url('https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=2071') center/cover;
+        }
+        .hero h2 { 
+            font-size:72px; 
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom:20px; 
+            letter-spacing: -2px;
+        }
+        .hero p { font-size:18px; margin-bottom:40px; color:#aaa; font-weight: 300; max-width: 500px; }
+        .btn-primary { 
+            background: #00F5FF; 
+            color:#000; 
+            padding:18px 45px; 
+            border-radius:4px; 
+            text-decoration:none; 
+            font-weight:800; 
+            font-size:14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover { background: #fff; transform: translateY(-3px); }
+        
+        /* SHOP SECTION - PREMIUM GRID */
+        section { padding:100px 40px; }
+        .container { max-width: 1400px; margin: auto; }
+        h2.section-title { 
+            font-size: 48px; 
+            font-weight: 900;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+        .subtitle { color: #777; margin-bottom: 60px; font-size: 16px; }
+        
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        .product-card { 
+            background: #0a0a0a; 
+            border-radius: 0; 
+            overflow: hidden; 
+            transition: 0.4s;
+            border: 1px solid #111;
+        }
+        .product-card:hover { border-color: #00F5FF; }
+        .product-img { height: 420px; background-size: cover; background-position: center; }
+        .product-info { padding: 24px; }
+        .product-info h3 { font-size: 18px; margin-bottom: 8px; font-weight: 600; }
+        .price { color: #00F5FF; font-size: 20px; font-weight: 800; margin-bottom: 20px; }
+        .btn-buy { 
+            background: #fff; 
+            color: #000; 
+            padding: 14px 0; 
+            border-radius: 0; 
+            text-decoration: none; 
+            font-weight: 800; 
+            display: block; 
+            text-align: center;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .btn-buy:hover { background: #00F5FF; }
+
+        footer { text-align:center; padding:50px 40px; color:#444; border-top:1px solid #111; font-size: 12px; }
+        
+        @media(max-width:768px){
+            .hero h2{font-size:42px;}
+            .top-bar{padding:14px 20px; flex-direction: column; gap: 10px;}
+            header{padding:20px;}
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PREMIUM SUBTLE TOP BAR -->
+    <div class="top-bar">
+        <div class="brand-tag">NEXA DIGITALS <span>PREMIUM TEMPLATE</span></div>
+        <div class="btn-group-top">
+            <a href="https://wa.me/2349150895039?text=Hi%20Nexa%20Digitals!%20I%20want%20to%20purchase%20the%20Premium%20Fashion%20Template" target="_blank" class="btn-buy-template">
+                Purchase Template
+            </a>
+            <a href="#shop" class="btn-view-demo">
+                View Demo
+            </a>
+        </div>
+    </div>
+
+    <header>
+        <h1>NEXA</h1>
+        <nav>
+            <a href="#shop">SHOP</a>
+            <a href="#about">ABOUT</a>
+            <a href="#">CONTACT</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>COLLECTION<br>2026</h2>
+        <p>Engineered for performance. Designed for the future. Built to convert.</p>
+        <a href="#shop" class="btn-primary">Shop Now</a>
+    </section>
+
+    <!-- SHOP SECTION -->
+    <section id="shop">
+        <div class="container">
+            <h2 class="section-title">FEATURED</h2>
+            <p class="subtitle">Curated essentials for modern movement</p>
+            
+            <div class="product-grid">
+                
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=880');"></div>
+                    <div class="product-info">
+                        <h3>Urban Tech Hoodie</h3>
+                        <p class="price">₦25,000</p>
+                        <a href="https://wa.me/2349150895039?text=Inquiry:%20Urban%20Tech%20Hoodie" target="_blank" class="btn-buy">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1551232864-3f0890e580d9?q=80&w=687');"></div>
+                    <div class="product-info">
+                        <h3>Pro Denim Jacket</h3>
+                        <p class="price">₦40,000</p>
+                        <a href="https://wa.me/2349150895039?text=Inquiry:%20Pro%20Denim%20Jacket" target="_blank" class="btn-buy">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=687');"></div>
+                    <div class="product-info">
+                        <h3>Aura Silk Dress</h3>
+                        <p class="price">₦55,000</p>
+                        <a href="https://wa.me/2349150895039?text=Inquiry:%20Aura%20Silk%20Dress" target="_blank" class="btn-buy">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1542272604-787c3835535d?q=80&w=1026');"></div>
+                    <div class="product-info">
+                        <h3>Tactical Cargo</h3>
+                        <p class="price">₦30,000</p>
+                        <a href="https://wa.me/2349150895039?text=Inquiry:%20Tactical%20Cargo" target="_blank" class="btn-buy">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1584302052177-8c1d86a6d53d?q=80&w=1170');"></div>
+                    <div class="product-info">
+                        <h3>NEXA Runners</h3>
+                        <p class="price">₦65,000</p>
+                        <a href="https://wa.me/2349150895039?text=Inquiry:%20NEXA%20Runners" target="_blank" class="btn-buy">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=736');"></div>
+                    <div class="product-info">
+                        <h3>Core Tee</h3>
+                        <p class="price">₦15,000</p>
+                        <a href="https://wa.me/2349150895039?text=Inquiry:%20Core%20Tee" target="_blank" class="btn-buy">Add to Cart</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" style="text-align: center; padding: 100px 40px;">
+        <div class="container">
+            <h2 class="section-title">BUILT FOR ICONS</h2>
+            <p style="color: #777; max-width: 600px; margin: auto;">This is a Nexa Digitals Premium Template. Replace the products, colors, and branding. Launch your brand in 48 hours.</p>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 NEXA. TEMPLATE BY NEXA DIGITALS. AVAILABLE FOR PURCHASE.
+    </footer>
+
+</body>
+</html>

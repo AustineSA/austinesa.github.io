@@ -4,7 +4,7 @@ body {
   font-family: 'Poppins', sans-serif; 
   background: #050505; 
   color: #fff; 
-  padding: 0; /* removed the 20px padding that was breaking layout */
+  padding: 0; 
 }
 .container { max-width: 1200px; margin: auto; padding: 0 20px; }
 a { text-decoration: none; }
@@ -98,20 +98,93 @@ h2 {
 .btn-project { background: linear-gradient(90deg, #ff2e88, #ff6b9d); color: #fff; padding: 12px 30px; border-radius: 50px; font-weight: 700; display: inline-block; margin-top: 15px; transition: 0.3s; }
 .btn-project:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255,46,136,0.3); }
 
-/* ========== NEW: CASE STUDY STYLES - ADDED ONLY ========== */
-.project-industry { color: #00d4ff; font-weight: 600; margin-bottom: 15px; font-size: 15px; }
-.project-detail { color: #aaa; margin-bottom: 12px; line-height: 1.7; font-size: 15px; }
-.project-detail b { color: #ff2e88; }
-.project-features { color: #ccc; list-style: none; padding-left: 0; margin-bottom: 15px; }
-.project-features li { margin-bottom: 8px; font-size: 14px; }
-.project-features li:before { content: "✓ "; color: #00d4ff; font-weight: 700; margin-right: 5px; }
-.project-tech { color: #aaa; margin-bottom: 15px; font-size: 14px; }
+/* ========== FIXED: CASE STUDY STYLES - 2 COLUMN QUEENIE LAYOUT ========== */
+.case-study-card {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 30px;
+    background: #1a1a2e;
+    border: 1px solid rgba(0, 242, 255, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    align-items: start;
+}
+
+.case-study-img {
+    background: linear-gradient(135deg, #ff00d4 0%, #00f2ff 100%);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.placeholder-icon {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.case-study-content p {
+    margin-bottom: 12px;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+.case-study-content h3 {
+    color: #00f2ff;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.case-study-tag {
+    background: rgba(0, 242, 255, 0.1);
+    color: #00f2ff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+    border: 1px solid rgba(0, 242, 255, 0.3);
+}
+
+.for-sale-tag {
+    background: #ff00d4;
+    color: #000;
+    padding: 6px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+.case-study-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(90deg, #00f2ff, #00d4ff);
+    color: #000;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
+    margin-top: 10px;
+}
+
+.case-study-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.7);
+}
 
 /* CONTACT */
 .contact { background: linear-gradient(135deg, #001a24, #050505); border-radius: 25px; padding: 60px 40px; text-align: center; border: 1px solid #00d4ff33; }
 .btn-whatsapp { background: #25D366; color: #fff; padding: 18px 40px; border-radius: 50px; font-weight: 800; font-size: 16px; display: inline-block; margin-top: 20px; }
 
-/* STICKY WHATSAPP - matches your .whatsapp-float */
+/* STICKY WHATSAPP */
 .sticky-whatsapp, .whatsapp-float { 
   position: fixed; 
   bottom: 25px; 
@@ -150,11 +223,20 @@ footer { background: #000; padding: 40px 20px; text-align: center; border-top: 1
   .about-grid { grid-template-columns: 1fr; gap: 30px; }
   .grid { grid-template-columns: 1fr; gap: 25px; }
   .card { padding: 30px 25px; }
+
+  /* MAKE CASE STUDY STACK ON MOBILE */
+  .case-study-card {
+    grid-template-columns: 1fr;
+  }
+  .case-study-img {
+    min-height: 250px;
+  }
   
   .sticky-whatsapp { bottom: 20px; right: 20px; padding: 12px 16px; font-size: 14px; }
-  footer { padding-bottom: 90px; } /* space for WhatsApp button */
+  footer { padding-bottom: 90px; }
 }
-/* ========== CONTACT FORM - INPUTS + TEXTAREA MATCH ========== */
+
+/* ========== CONTACT FORM ========== */
 .contact-form input, 
 .contact-form textarea { 
   padding:14px; 
@@ -178,6 +260,7 @@ footer { background: #000; padding: 40px 20px; text-align: center; border-top: 1
 .contact-form textarea {
   min-height: 120px;
 }
+
 /* ========== WHY CHOOSE + PROCESS + TESTIMONIALS ========== */
 .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 40px; }
 .process-step { text-align: center; }
@@ -192,7 +275,8 @@ footer { background: #000; padding: 40px 20px; text-align: center; border-top: 1
 }
 .testimonial-card p { font-style: italic; font-size: 18px; margin-bottom: 15px; }
 .testimonial-card h4 { color: #00d4ff; }
-/* FORCE ALL INPUTS AND TEXTAREA TO MATCH - NO MERCY */
+
+/* FORCE ALL INPUTS AND TEXTAREA TO MATCH */
 input[type="text"],
 input[type="email"],
 textarea { 
@@ -216,7 +300,6 @@ textarea:focus {
   box-shadow: 0 0 0 3px rgba(0,212,255,0.1) !important;
 }
 
-/* FORCE LAYOUT */
 form {
   display: flex !important;
   flex-direction: column !important;
